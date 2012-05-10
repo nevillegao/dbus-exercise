@@ -1,0 +1,38 @@
+++++++++++++++
+D-BUS Exercise
+++++++++++++++
+
+:Author: Gao Nan
+
+Introduction
+============
+
+This project contains three applications including one receiver and two senders. 
+The applications designed using low-level D-Bus C API. So they could communicate 
+with each other over DBUS. 
+
+One sender will send a signal every one second to inform the receiver to randomly 
+add an item to the queue that holds items (1024 default) that consists of a name 
+and a value. The other sender will invoke a remote method every five seconds to 
+remove an item from the queue randomly. 
+
+The applications run until 'CTRL-C' is hit. Especially, the receiver will exit 
+if the queue is full or empty.
+
+Installation
+============
+
+To install this project, you should first unzip the tarball to a directory, and 
+enter the directory to type the command "./configure && make && sudo make install". 
+The applications will be compiled and installed to your system directory 
+("/usr/local/bin" default) which you can change when running the command "./configure" 
+using the configure option '--prefix='.
+
+Then you could type commands "receiver", "sender_add" or "sender_remove" to run 
+the collection of applications which displays what it is doing.
+
+If there is a warning says 
+"Connection Error (Failed to execute dbus-launch to autolaunch D-Bus session)" 
+when you want to run applications, do the following to solve it: 
+* type command "dbus-launch" 
+* export the given paths 
