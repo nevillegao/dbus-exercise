@@ -1,0 +1,20 @@
+Write a collection of applications in C that communicate over DBUS.
+
+Application 1:
+The application should be a simple queue that holds items that consist 
+of a name (512 chars max) and a unit32 value.  The application should 
+expose two DBUS interfaces, one to add items to the queue and one to  
+pop them off the queue.  The application should display what it is  
+doing and run until a key is hit.
+
+Application 2:
+The application should communicate with Application 1 over DBUS and  
+randomly add items to the queue as long as it is running.  The app  
+should display what it is adding to the queue and run until a key is
+hit
+
+Application 3:
+The application should communicate with Application 1 over DBUS and  
+randomly remove items from the queue as long as it is running.  The  
+app should display what is is removing from the queue and run until a 
+key is hit.
